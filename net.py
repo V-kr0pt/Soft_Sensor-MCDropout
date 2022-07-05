@@ -13,7 +13,7 @@ class net:
       p_dropout -> probabilidade de dropout (float)
 
       l -> length scale (float)
-      
+
       neurons -> neuronios em cada camada (lista)
     '''
 
@@ -74,20 +74,20 @@ class net:
   def MC_predict(self, Xtsn, ytsn, yts, T):
     '''
     Inputs:
-      Xtsn -> dados de entrada de teste normalizados (array)
+      Xtsn -> dados de entrada de teste normalizados 
 
-      ytsn -> dados de saída de teste normalizados (array)
+      ytsn -> dados de saída de teste normalizados 
       
-      yts -> dados de saísa de teste não normalizados (array)
+      yts -> dados de saísa de teste não normalizados 
       
-      T -> qtd de predições (int)
+      T -> qtd de predições 
 
     Outputs:
-      MC_pred -> predição da rede neural (array)
+      MC_pred -> predição da rede neural 
 
-      MC_inc -> incerteza associada a predição (array)
+      MC_inc -> incerteza associada a predição 
 
-      ll -> log-likelihood do modelo (array)
+      ll -> log-likelihood do modelo 
     '''
 
     #realizando T predições
