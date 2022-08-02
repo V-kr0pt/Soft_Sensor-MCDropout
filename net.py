@@ -50,7 +50,7 @@ class net:
     
 
 
-  def MC_train(self, Xtn, ytn, epoch, lf='mean_squared_error', op='Adam'):
+  def MC_train(self, Xtn, ytn, epochs, lf='mean_squared_error', op='Adam'):
     '''
     Inputs:
       Xtn -> dados de entrada de treino normalizados (array)
@@ -63,11 +63,11 @@ class net:
 
       op -> optimizer (op) | op = 'Adam'
     '''
-
+    self.epochs = epochs
     #Treinamento da rede
     print("-Treinando... -")
     self.model.compile(loss= lf, optimizer= op)
-    self.model.fit(Xtn, ytn, epochs=epoch, verbose=0)
+    self.model.fit(Xtn, ytn, epochs=self.epochs, verbose=0)
     print("-Treinamento Finalizado-")
   
   
